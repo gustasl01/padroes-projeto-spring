@@ -1,21 +1,18 @@
 package one.digitalinnovation.gof.model;
 
-import javax.persistence.Entity;
-import javax.persistence.Id;
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import jakarta.validation.constraints.NotBlank;
 
-/**
- * Os atributos desse modelo foram gerados automaticamente pelo site
- * jsonschema2pojo.org. Para isso, usamos o JSON de retorno da API do ViaCEP.
- * 
- * @see <a href="https://www.jsonschema2pojo.org">jsonschema2pojo.org</a>
- * @see <a href="https://viacep.com.br">ViaCEP</a>
- * 
- * @author falvojr
- */
+import io.swagger.v3.oas.annotations.media.Schema;
+
 @Entity
+@Schema(description = "Representa um endereço com dados do ViaCEP")
 public class Endereco {
 
 	@Id
+	@NotBlank(message = "CEP é obrigatório")
+	@Schema(description = "CEP do endereço (8 dígitos)", example = "01310100")
 	private String cep;
 	private String logradouro;
 	private String complemento;
