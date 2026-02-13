@@ -188,10 +188,6 @@ curl -X POST http://localhost:8080/clientes \
 - Código limpo e bem comentado
 - Configurações externalizadas
 
-## 📝 Licença
-
-Este projeto está sob a licença MIT. Veja o arquivo [LICENSE](LICENSE) para mais detalhes.
-
 
 ---
 
